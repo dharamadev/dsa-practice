@@ -9,7 +9,7 @@ public class DecompressString {
 
     private static String decompress(String str) {
         String nums = "1234567890";
-        String res = "";
+        StringBuilder res = new StringBuilder();
         int start = 0;
         int end = 0;
 
@@ -19,12 +19,12 @@ public class DecompressString {
                 end++;
             } else {
                 int num = Integer.parseInt(str.substring(start, end));
-                res += chare.repeat(num);
+                res.append(chare.repeat(num));
                 end++;
                 start = end;
             }
         }
-        return res;
+        return res.toString();
     }
 
 }

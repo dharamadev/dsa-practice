@@ -10,7 +10,7 @@ public class CompressString {
 
     private static String compress(String str) {
         str += "!";
-        String res = "";
+        StringBuilder res = new StringBuilder();
         int start = 0;
         int end = 0;
 
@@ -22,14 +22,13 @@ public class CompressString {
             } else {
                 int count = end - start;
                 if (count > 1)
-                    res += "" + count + st;
+                    res.append(count).append(st);
                 else
-                    res += st;
-
+                    res.append(st);
                 start = end;
             }
         }
 
-        return res;
+        return res.toString();
     }
 }
