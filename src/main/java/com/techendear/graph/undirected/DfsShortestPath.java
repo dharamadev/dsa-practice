@@ -47,7 +47,7 @@ public class DfsShortestPath {
             AbstractMap.SimpleEntry<String, Integer> data = q.poll();
             String node = data.getKey();
             Integer distance = data.getValue();
-            if (node == end) return distance;
+            if (Objects.equals(node, end)) return distance;
             for (String curr : graph.get(node)) {
                 if (!visited.contains(curr)) {
                     visited.add(curr);

@@ -31,7 +31,6 @@ public class CountNumberOccur {
 
     private static int countOccur(Node<Integer> root, Integer target) {
         if (root == null) return 0;
-
         int val = Objects.equals(root.val, target) ? 1 : 0;
         return val + countOccur(root.left, target) + countOccur(root.right, target);
     }
