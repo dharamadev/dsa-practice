@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class ChildrenOfANode {
+public class ChildrenOfNode {
     public static void main(String[] args) {
         Node<String> a = new Node<>("a");
         Node<String> b = new Node<>("b");
